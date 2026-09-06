@@ -101,14 +101,15 @@ header h1 {
     font-size: 1.15rem;
 }
 
-button {
+.hero-action {
+    display: inline-block;
     padding: 13px 22px;
     color: white;
     font-family: Arial, sans-serif;
     font-weight: 700;
     background: var(--blue);
     border: 0;
-    cursor: pointer;
+    text-decoration: none;
 }
 
 section:not(#hero) {
