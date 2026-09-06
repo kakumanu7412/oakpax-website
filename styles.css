@@ -26,38 +26,43 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
+    display: flex;
     gap: 16px;
     align-items: center;
+    justify-content: space-between;
     padding: 8px clamp(24px, 6vw, 96px);
     color: var(--ink);
     background: white;
     box-shadow: 0 4px 16px rgba(18, 48, 71, 0.18);
 }
 
+.header-brand {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 12px;
+}
+
 .site-logo {
-    width: 32px;
-    height: 32px;
+    width: 64px;
+    height: 64px;
     object-fit: contain;
 }
 
 header h1 {
-    grid-column: span 5;
     margin: 0;
     font-size: clamp(1.25rem, 2vw, 1.75rem);
     letter-spacing: 0.04em;
 }
 
 .menu-grid {
-    display: grid;
-    grid-column: 6 / -1;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
+    display: flex;
+    align-items: center;
     gap: 8px;
+    margin-left: auto;
 }
 
 .menu-grid a {
-    grid-column: span 3;
     padding: 6px 8px;
     color: var(--ink);
     font-family: Arial, sans-serif;
