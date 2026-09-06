@@ -48,7 +48,7 @@ header {
 }
 
 .mobile-menu {
-    display: contents;
+    display: none;
 }
 
 .mobile-menu summary {
@@ -190,6 +190,10 @@ footer {
         position: relative;
         display: block;
         margin-left: auto;
+    }
+
+    .desktop-menu {
+        display: none;
     }
 
     .mobile-menu summary {
