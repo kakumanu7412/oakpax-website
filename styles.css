@@ -43,6 +43,10 @@ header {
     gap: 12px;
 }
 
+.logo-link {
+    display: flex;
+}
+
 .site-logo {
     width: 64px;
     height: 64px;
