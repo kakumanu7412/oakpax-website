@@ -47,6 +47,14 @@ header {
     display: flex;
 }
 
+.mobile-menu {
+    display: contents;
+}
+
+.mobile-menu summary {
+    display: none;
+}
+
 .site-logo {
     width: 64px;
     height: 64px;
@@ -166,16 +174,57 @@ footer {
 
 @media (max-width: 760px) {
     header {
-        gap: 18px;
+        padding: 8px 16px;
     }
 
-    header h1,
-    .menu-grid {
-        grid-column: 1 / -1;
+    .site-logo {
+        width: 48px;
+        height: 48px;
     }
 
-    .menu-grid a {
-        grid-column: span 6;
+    header h1 {
+        font-size: 1.15rem;
+    }
+
+    .mobile-menu {
+        position: relative;
+        display: block;
+        margin-left: auto;
+    }
+
+    .mobile-menu summary {
+        display: block;
+        padding: 8px 10px;
+        color: var(--ink);
+        font-family: Arial, sans-serif;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .mobile-menu .menu-grid {
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: min(220px, calc(100vw - 32px));
+        padding: 8px;
+        background: white;
+        box-shadow: 0 4px 16px rgba(18, 48, 71, 0.18);
+    }
+
+    .mobile-menu[open] .menu-grid {
+        display: flex;
+    }
+
+    .mobile-menu .menu-grid a {
+        padding: 12px;
+        text-align: left;
     }
 
     .service-card {
@@ -184,9 +233,16 @@ footer {
 }
 
 @media (max-width: 420px) {
-    .menu-grid a {
-        grid-column: 1 / -1;
-        text-align: left;
+    #hero {
+        padding: 56px 24px;
+    }
+
+    #hero h2 {
+        font-size: 2.5rem;
+    }
+
+    section:not(#hero) {
+        padding: 40px 24px;
     }
 
     .service-card {
