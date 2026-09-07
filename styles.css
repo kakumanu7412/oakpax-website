@@ -96,7 +96,7 @@ header h1 {
 }
 
 #hero {
-    min-height: 300px;
+    min-height: 200px;
     padding: clamp(40px, 14vw, 80px) clamp(12px, 10vw, 80px);
     background: linear-gradient(120deg, #dcebe6, #f7f2e8 65%);
 }
